@@ -29,6 +29,7 @@
     "passport-github2": "^0.1.12",
     "passport-google-oauth20": "^2.0.0",
     "redux-thunk": "^2.3.0",
+    "sendgrid": "^5.2.3",
     "stripe": "^8.134.0"
   }
 }
