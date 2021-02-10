@@ -1,4 +1,3 @@
-// It's Capital naming to export as a class
 const sendgrid = require("sendgrid");
 const helper = sendgrid.mail;
 const keys = require("../config/keys");
@@ -35,8 +34,8 @@ class Mailer extends helper.Mail {
   addRecipients() {
     const personalize = new helper.Personalization();
 
-    this.recipients.forEach((recipent) => {
-      personalize.addTo(recipent);
+    this.recipients.forEach((recipient) => {
+      personalize.addTo(recipient);
     });
     this.addPersonalization(personalize);
   }
@@ -44,8 +43,8 @@ class Mailer extends helper.Mail {
   async send() {
     const request = this.sgApi.emptyRequest({
       method: "POST",
-      path: "/vs/mail/send",
-      body: this.toJASON(),
+      path: "/v3/mail/send",
+      body: this.toJSON(),
     });
 
     const response = this.sgApi.API(request);
