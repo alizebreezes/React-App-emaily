@@ -2,17 +2,17 @@ import React from "react";
 
 const Landing = () => {
   return (
-    <div class="container" style={{ textAlign: "center" }}>
+    <div className="container" style={{ textAlign: "center" }}>
       <section style={{ marginBottom: "35px" }}>
         <h1>Emaily</h1>
         Collect feedback form your users!
       </section>
       <section>
-        <div class="row" style={{ width: "80%" }}>
-          <div class="col s12 m12">
-            <div class="card blue-grey">
-              <div class="card-content white-text">
-                <span class="card-title" style={{ marginBottom: "25px" }}>
+        <div className="row" style={{ width: "80%" }}>
+          <div className="col s12 m12">
+            <div className="card blue-grey">
+              <div className="card-content white-text">
+                <span className="card-title" style={{ marginBottom: "25px" }}>
                   <h5>Instruction to Test Survey App 📜</h5>
                 </span>
                 <hr style={{ marginBottom: "15px" }} />
