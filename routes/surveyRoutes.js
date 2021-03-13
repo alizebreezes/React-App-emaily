@@ -25,7 +25,6 @@ module.exports = (app) => {
   app.post("/api/surveys/webhooks", (req, res) => {
     const p = new Path("/api/surveys/:surveyId/:choice");
 
-    // MangoDB world, use Underscore to find specific property like _id
     _.chain(req.body)
       .map(({ email, url }) => {
         const match = p.test(new URL(url).pathname);
@@ -62,7 +61,9 @@ module.exports = (app) => {
       title,
       subject,
       body,
-      recipients: recipients.split(",").map((email) => ({ email })),
+      recipients: recipients
+        .split(",")
+        .map((email) => ({ email: email.trim() })),
       _user: req.user.id,
       dateSent: Date.now(),
     });

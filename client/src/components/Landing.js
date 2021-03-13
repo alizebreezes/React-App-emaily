@@ -8,7 +8,7 @@ const Landing = () => {
         Collect feedback form your users!
       </section>
       <section>
-        <div className="row" style={{ width: "80%" }}>
+        <div className="row" style={{ width: "90%" }}>
           <div className="col s12 m12">
             <div className="card blue-grey">
               <div className="card-content white-text">
