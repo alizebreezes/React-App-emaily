@@ -7,24 +7,28 @@ class SurveyList extends Component {
     this.props.fetchSurveys();
   }
 
-  render() {
-    return (
-      <div>
-        <div class="card blue-grey darken-1">
-          <div class="card-content white-text">
-            <span class="card-title">Card Title</span>
-            <p>
-              I am a very simple card. I am good at containing small bits of
-              information. I am convenient because I require little markup to
-              use effectively.
+  renderSurveys() {
+    return this.props.surveys.reverse().map((survey) => {
+      return (
+        <div className="card darken-3" key={survey._id}>
+          <div className="card-content">
+            <span className="card-title">{survey.title}</span>
+            <p>Survey Content: {survey.body}</p>
+            <p className="right">
+              Sent On: {new Date(survey.dateSent).toLocaleDateString()}
             </p>
           </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
+          <div className="card-action">
+            <a>Yes: {survey.yes}</a>
+            <a>No: {survey.no}</a>
           </div>
         </div>
-      </div>
-    );
+      );
+    });
+  }
+
+  render() {
+    return <div>{this.renderSurveys()}</div>;
   }
 }
 
