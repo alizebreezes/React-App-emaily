@@ -14,6 +14,8 @@
 ## General info
 This full stack web application project is to practice modern technologies using Node.js with React. You can add credits, create survey and send to emails. 
 
+Find Heroku deployed version here: https://fathomless-island-66385.herokuapp.com
+
 ##### 🔑 To test the app 
 **test card No. 4242 4242 4242 4242**
 (other else data can be filled with any valid type (fake) as your own. )
